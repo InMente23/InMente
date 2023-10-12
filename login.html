@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <link rel="icon" href="img/logo2.png">
+    <title>Login</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html"><img src="img/logo.png" alt="Logo do Site"></a>
+    </header>
+    <div class="container">
+        <section class="content">
+            <h2>Faça Login</h2>
+            <form class="form" id="login-form">
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit" class="button">Entrar</button>
+            </form>
+            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+            <p><a href="recuperar_senha.html">Esqueceu a senha?</a></p>
+
+
+
+
+        </section>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2023 InMente</p>
+    </footer>
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

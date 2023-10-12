@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloGT.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-messaging.js"></script>
+ 
+  
+
+ 
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+         <link rel="icon" href="img/logo2.png">
+        <title>Painel do Usuário</title>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <img src="img/logo.png" alt="Logo do Site">
+    </header>
+   
+
+    <div class="container">
+
+
+        <div class="contente">
+
+            <h2>Modelo de Gerenciamento de Tempo</h2>
+
+            <div class="matrix ">
+                
+                <div class="quadrant urgent-important">
+                    <h3>Urgente e Importante</h3>
+                    <textarea id="agenda-urgent-important" placeholder="Digite..."></textarea>
+                </div>
+
+                <div class="quadrant not-urgent-important">
+                    <h3>Não Urgente, mas Importante</h3>
+                    <textarea id="agenda-not-urgent-important" placeholder="Digite..."></textarea>
+                </div>
+
+                <div class="quadrant urgent-not-important">
+                    <h3>Urgente, mas Não Importante</h3>
+                    <textarea id="agenda-urgent-not-important" placeholder="Digite..."></textarea>
+                </div>
+
+                <div class="quadrant not-urgent-not-important">
+                    <h3>Não Urgente e Não Importante</h3>
+                    <textarea id="agenda-not-urgent-not-important" placeholder="Digite..."></textarea>
+                </div>
+
+                <!-- Botão Salvar -->
+                <button id="save-button" style="display: block; position: fixed; right: 60px;     border: 8px solid #87cefa;
+                background-color: #87cefa; "><b>Salvar</b></button>
+
+                <!-- ... Seu código HTML existente ... -->
+                <!-- Botão para salvar a agenda -->
+                <button id="orientacoes-button" class="button" style="display: block; position: fixed; right: 60px; top: 220px;    border: 8px solid #87cefa;
+                background-color: #87cefa; "><a href="gerenciamento_tempo.html" style="text-decoration: none; color:black; font-family: Arial; "><b>Orientações</b></a> </button>
+
+                <!-- ... Seu código HTML existente ... -->
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <nav class="menu" id="mobile-menu">
+        <ul class="menu-list">
+            <li><a href="user_panel.html">Painel do Usuário</a></li>
+            <li><a href="tec_estudos.html">Técnicas de Estudo</a></li>
+            <li><a href="tec_relax.html">Técnicas de Relaxamento</a></li>
+            <li><a href="gerenciamento_tempo.html">Gerenciamento de Tempo</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="perfil_usuario.html">Perfil</a></li>
+            <li><a href="#" id="logout">Sair</a></li>
+        </ul>
+    </nav>
+
+    <footer class="footer">
+        <p>&copy; 2023 InMente</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+
+
+
+
+    <script src="app.js"></script>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ 
+         // Verifique se o usuário está autenticado
+         firebase.auth().onAuthStateChanged((user) => {
+             if (user) {
+                 // O usuário está logado, exiba a mensagem de boas-vindas
+                 const welcomeMessage = document.createElement("div");
+                 welcomeMessage.id = "welcome-message";
+                 welcomeMessage.style.position = "fixed";
+                 welcomeMessage.style.top = "0";
+                 welcomeMessage.style.left = "0";
+                 welcomeMessage.style.width = "100%";
+                 welcomeMessage.style.height = "100%";
+                 welcomeMessage.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+                 welcomeMessage.style.zIndex = "9999";
+ 
+                 const messageContent = document.createElement("div");
+                 messageContent.className = "message-content";
+                 messageContent.style.position = "absolute";
+                 messageContent.style.top = "50%";
+                 messageContent.style.left = "50%";
+                 messageContent.style.transform = "translate(-50%, -50%)";
+                 messageContent.style.backgroundColor = "#87cefa";
+                 messageContent.style.padding = "20px";
+                 messageContent.style.borderRadius = "10px";
+                 messageContent.style.color = "#000";
+ 
+                 const messageText = document.createElement("p");
+                 messageText.textContent = "Bem-vindo ao nosso sistema! Este é um modelo da matriz de Eisenhower para ajudar no seu gerenciamento de tempo.";
+ 
+                 const okButton = document.createElement("button");
+                 okButton.id = "ok-button";
+                 okButton.textContent = "OK";
+                 okButton.style.backgroundColor = "#fff";
+                 okButton.style.color = "#87cefa";
+                 okButton.style.border = "none";
+                 okButton.style.padding = "10px 20px";
+                 okButton.style.fontSize = "16px";
+                 okButton.style.cursor = "pointer";
+                 okButton.style.borderRadius = "5px";
+ 
+                 messageContent.appendChild(messageText);
+                 messageContent.appendChild(okButton);
+ 
+                 welcomeMessage.appendChild(messageContent);
+                 document.body.appendChild(welcomeMessage);
+ 
+                 okButton.addEventListener("click", function () {
+                     welcomeMessage.style.display = "none";
+                 });
+             }
+         });
+     </script>
+
+
+</body>
+
+</html>

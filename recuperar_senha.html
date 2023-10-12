@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <link rel="icon" href="img/logo2.png">
+    <title>Recuperar senha</title>
+</head>
+<body>
+
+    <header class="header">
+        <img src="img/logo.png" alt="Logo do Site">
+    </header>
+    <div class="container">
+    <h2>Recuperar Senha</h2>
+    <p>Informe seu endereço de e-mail para redefinir sua senha:</p>
+    <form id="reset-password-form">
+        <input type="email" id="email" placeholder="Seu E-mail" required>
+        <button type="submit" style="border: 5px solid #87cefa; background-color: #87cefa;">Enviar Link de Redefinição</button>
+    </form>
+</div>
+    <p><a href="login.html">Voltar para o login</a></p>
+
+    <footer class="footer">
+        <p>&copy; 2023 InMente</p>
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>

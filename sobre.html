@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo-responsive.css"> 
+     <link rel="icon" href="img/logo2.png">
+    <title >Sobre o InMente</title>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="img/logo.png" alt="Logo do Site">
+    </header>
+    <div class="container">
+        
+        
+<div class="content"  >
+    <h2>Conheça os Recursos Disponíveis</h2>
+    <div class="panel" 
+    style="
+     background-color: #87cefa62; 
+            text-align: start;
+            margin: 210px;
+            margin-top: 0%;
+            margin-bottom: 30px;
+    ">
+  <p style="margin-bottom: -1%; margin-top: -1%; margin-right: -5px;">
+
+    <b>Painel do Usuário: </b>Nesta seção, você terá acesso a um modelo de uma ferramenta essencial para melhorar
+    sua organização e produtividade. Nessa agenda, baseada na matriz de Eisenhower, permitirá que você
+     classifique suas tarefas de acordo com a importância e a urgência, tornando mais fácil priorizar
+      o que é realmente crucial. Dessa forma, você poderá aproveitar melhor seu tempo, evitando
+       procrastinação e lidando de forma mais eficaz com suas obrigações acadêmicas e pessoais.
+   <br><br>
+
+    <b>Técnicas de Estudo: </b>Nesta aba, você encontrará técnicas eficazes para otimizar
+     o seu aprendizado. Encontre dicas valiosas sobre como fazer leitura ativa, mapas mentais e resumos
+      para melhorar a compreensão dos conteúdos estudados. Essas técnicas ajudarão
+        você a se preparar melhor para provas e a desenvolver habilidades de estudo que irão beneficiá-lo
+         ao longo da vida acadêmica.
+    <br><br>
+
+   
+    <b>Técnica de Relaxamento: </b>Nesta seção, você encontrará técnicas eficazes de relaxamento para
+     aliviar o estresse e a tensão acumulada. Apresentaremos exercícios de respiração, meditação e
+      outras práticas de relaxamento que podem ser incorporadas facilmente em sua rotina diária.
+       Além disso, você também encontrará dicas para melhorar seu bem-estar emocional e físico.
+        Permita-se momentos de descanso e autocuidado para enfrentar os desafios da vida acadêmica com
+         mais tranquilidade e equilíbrio.
+    </p>     
+</div>
+ </div>
+    </div>
+    <nav class="menu" id="mobile-menu">
+        <ul class="menu-list">
+            <li><a href="user_panel.html">Painel do Usuário</a></li>
+            <li><a href="tec_estudos.html">Técnicas de Estudo</a></li>
+            <li><a href="tec_relax.html">Técnicas de Relaxamento</a></li>
+            <li><a href="gerenciamento_tempo.html">Gerenciamento de Tempo</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="perfil_usuario.html">Perfil</a></li>
+            <li><a href="#" id="logout">Sair</a></li>
+        </ul>
+    </nav>
+    <footer class="footer">
+        <p>&copy; 2023 InMente</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</div>
+</body>
+</html>
