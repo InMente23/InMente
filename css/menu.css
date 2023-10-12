@@ -1,0 +1,65 @@
+/* Estilos do menu responsivo */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+    margin-top: -10px; /* Ajuste conforme necessário */
+}
+
+/* Estilo do ícone do menu de sanduíche */
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px auto;
+    transition: 0.4s;
+}
+
+/* Estilo do ícone do menu de sanduíche quando expandido */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* CSS para dispositivos móveis (tablets e celulares) */
+@media (max-width: 768px) {
+    /* Esconde o menu estilo desktop */
+    .menu ul {
+        display: none;
+    }
+
+    /* Exibe o menu estilo sanduíche quando o ícone é clicado */
+    .menu-list.active {
+        display: block;
+        background-color: white;
+        position: absolute;
+        top: 60px; /* Ajuste conforme necessário */
+        left: 0;
+        width: 100%;
+        border-right: none;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        z-index: 1; /* Garante que o menu sobreponha outros elementos */
+    }
+
+    .menu-list.active li {
+        margin-bottom: 10px;
+    }
+
+    .menu-list.active a {
+        background-color: #87cefa;
+    }
+
+    .menu-list.active a:hover {
+        background-color: #60bdf7;
+    }
+}

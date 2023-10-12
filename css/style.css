@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Estilos do cabeçalho */
+.header {
+    background-color: #87cefa;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Estilos do conteúdo */
+.content {
+    margin-top: 20px;
+}
+
+/* Estilos dos botões */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #87cefa;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+/* Estilos do rodapé */
+.footer {
+    background-color: #87cefa;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Estilos do cabeçalho */
+.header {
+    background-color: #87cefa;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Estilos do conteúdo */
+.content {
+    margin-top: 20px;
+}
+
+/* Estilos dos botões */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #87cefa;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+/* Estilos dos formulários */
+.form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    width: auto;
+}
+
+/* Estilos do rodapé */
+.footer {
+    background-color: #87cefa;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
